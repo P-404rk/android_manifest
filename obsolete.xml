@@ -57,16 +57,22 @@
   <remove-project name="kernel/prebuilts/5.4/x86-64"/>
   <remove-project name="kernel/prebuilts/5.15/arm64"/>
   <remove-project name="kernel/prebuilts/5.15/x86-64"/>
+  <remove-project name="kernel/prebuilts/6.1/arm64"/>
+  <remove-project name="kernel/prebuilts/6.1/x86-64"/>
   <remove-project name="kernel/prebuilts/common-modules/virtual-device/4.19/arm64"/>
   <remove-project name="kernel/prebuilts/common-modules/virtual-device/4.19/x86-64"/>
   <remove-project name="kernel/prebuilts/common-modules/virtual-device/5.4/arm64"/>
   <remove-project name="kernel/prebuilts/common-modules/virtual-device/5.4/x86-64"/>
   <remove-project name="kernel/prebuilts/common-modules/virtual-device/5.15/arm64"/>
   <remove-project name="kernel/prebuilts/common-modules/virtual-device/5.15/x86-64"/>
+  <remove-project name="kernel/prebuilts/common-modules/virtual-device/6.1/arm64"/>
+  <remove-project name="kernel/prebuilts/common-modules/virtual-device/6.1/x86-64"/>
   <remove-project name="kernel/prebuilts/common-modules/virtual-device/mainline/arm64"/>
   <remove-project name="kernel/prebuilts/common-modules/virtual-device/mainline/x86-64"/>
   <remove-project name="kernel/prebuilts/mainline/arm64"/>
+  <remove-project name="kernel/prebuilts/mainline/x86-64"/>
   <remove-project name="platform/prebuilts/android-emulator" />
+  <remove-project name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8"/>
   <remove-project name="platform/prebuilts/qemu-kernel" />
 
   <!-- Vendor -->
@@ -78,11 +84,11 @@
   <remove-project name="platform/vendor/nxp/opensource/hidlimpl" />
   <remove-project name="platform/vendor/qcom-opensource/wlan/utils/sigma-dut" />
   <remove-project name="platform/vendor/qcom/kalama" />
-  <remove-project name="platform/vendor/qcom/crow" />
   <remove-project name="platform/vendor/qcom/lahaina" />
   <remove-project name="platform/vendor/qcom/taro" />
   <remove-project name="platform/vendor/st/opensource/driver" />
   <remove-project name="platform/vendor/st/opensource/eSE-driver" />
   <remove-project name="platform/vendor/st/opensource/halimpl" />
   <remove-project name="platform/vendor/st/opensource/keymaster" />
+
 </manifest>

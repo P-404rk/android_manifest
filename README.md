@@ -13,8 +13,8 @@ Error 404: Bugs not found!
 
  	```bash
          mkdir p-404 && cd p-404
-         repo init -u https://github.com/P-404/android_manifest -b umai
-         repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+         repo init -u https://github.com/P-404/android_manifest -b vito
+         repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
  	```
 
  3. Once the source is downloaded prepare your trees.

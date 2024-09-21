@@ -7,7 +7,7 @@
           sync-c="true"
           sync-tags="false"
           review="https://android-review.googlesource.com/"
-          revision="refs/tags/android-14.0.0_r2"/>
+          revision="refs/tags/android-15.0.0_r1"/>
 
   <!-- CLO -->
   <remote name="clo-la"
@@ -26,15 +26,15 @@
 
   <remote name="404"
           fetch="https://github.com/P-404/"
-          revision="umai" />
+          revision="vito" />
 
   <remote name="404-gitlab"
           fetch="https://gitlab.com/project-404/"
-          revision="umai" />
+          revision="vito" />
 
   <remote  name="p404-devices"
            fetch="https://github.com/P404-Devices/"
-           revision="umai" />
+           revision="vito" />
 
   <!-- 404 -->
   <include name="404.xml"/>
