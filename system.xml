@@ -25,7 +25,6 @@
   <project name="device/google/contexthub" path="device/google/contexthub"/>
   <project name="device/google/cuttlefish" path="device/google/cuttlefish"/>
   <project name="device/google/cuttlefish_prebuilts" path="device/google/cuttlefish_prebuilts" clone-depth="1"/>
-  <project name="device/google/trout" path="device/google/trout"/>
   <project name="device/google/vrservices" path="device/google/vrservices"/>
   <project name="device/google_car" path="device/google_car"/>
   <project name="device/linaro/dragonboard" path="device/linaro/dragonboard"/>
@@ -63,29 +62,36 @@
   <project name="platform/bootable/libbootloader" path="bootable/libbootloader"/>
   <project name="platform/bootable/recovery" path="bootable/recovery"/>
   <project name="platform/build_repo" path="build/make">
-    <linkfile dest="build/CleanSpec.mk" src="CleanSpec.mk"/>
-    <linkfile dest="build/buildspec.mk.default" src="buildspec.mk.default"/>
-    <linkfile dest="build/core" src="core"/>
-    <linkfile dest="build/envsetup.sh" src="envsetup.sh"/>
-    <linkfile dest="build/target" src="target"/>
-    <linkfile dest="build/tools" src="tools"/>
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk"/>
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default"/>
+    <linkfile src="core" dest="build/core"/>
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh"/>
+    <linkfile src="target" dest="build/target"/>
+    <linkfile src="tools" dest="build/tools"/>
   </project>
   <project name="platform/build/bazel" path="build/bazel">
-    <linkfile dest="WORKSPACE" src="bazel.WORKSPACE"/>
-    <linkfile dest="tools/bazel" src="bazel.sh"/>
-    <linkfile dest="BUILD" src="bazel.BUILD"/>
+    <linkfile src="bazel.WORKSPACE" dest="WORKSPACE"/>
+    <linkfile src="bazel.sh" dest="tools/bazel"/>
+    <linkfile src="bazel.BUILD" dest="BUILD"/>
   </project>
   <project name="platform/build/bazel_common_rules" path="build/bazel_common_rules"/>
   <project name="platform/build/blueprint" path="build/blueprint"/>
   <project name="platform/build/pesto" path="build/pesto"/>
   <project name="platform/build/soong" path="build/soong">
-    <linkfile dest="Android.bp" src="root.bp"/>
-    <linkfile dest="bootstrap.bash" src="bootstrap.bash"/>
+    <linkfile src="root.bp" dest="Android.bp"/>
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash"/>
   </project>
   <project name="platform/cts" path="cts" clone-depth="1"/>
   <project name="platform/dalvik" path="dalvik"/>
   <project name="platform/developers/build" path="developers/build"/>
   <project name="platform/development" path="development"/>
+  <project name="platform/external/FP16" path="external/FP16"/>
+  <project name="platform/external/FXdiv" path="external/FXdiv"/>
+  <project name="platform/external/ImageMagick" path="external/ImageMagick"/>
+  <project name="platform/external/OpenCSD" path="external/OpenCSD"/>
+  <project name="platform/external/Reactive-Extensions/RxCpp" path="external/Reactive-Extensions/RxCpp"/>
+  <project name="platform/external/TestParameterInjector" path="external/TestParameterInjector"/>
+  <project name="platform/external/XNNPACK" path="external/XNNPACK"/>
   <project name="platform/external/aac" path="external/aac"/>
   <project name="platform/external/abseil-cpp" path="external/abseil-cpp"/>
   <project name="platform/external/adt-infra" path="external/adt-infra"/>
@@ -138,10 +144,10 @@
   <project name="platform/external/curl" path="external/curl"/>
   <project name="platform/external/dagger2" path="external/dagger2"/>
   <project name="platform/external/deqp" path="external/deqp" clone-depth="1"/>
-  <project name="platform/external/deqp-deps/amber" path="external/deqp-deps/amber"/>
-  <project name="platform/external/deqp-deps/glslang" path="external/deqp-deps/glslang"/>
   <project name="platform/external/deqp-deps/SPIRV-Headers" path="external/deqp-deps/SPIRV-Headers"/>
   <project name="platform/external/deqp-deps/SPIRV-Tools" path="external/deqp-deps/SPIRV-Tools"/>
+  <project name="platform/external/deqp-deps/amber" path="external/deqp-deps/amber"/>
+  <project name="platform/external/deqp-deps/glslang" path="external/deqp-deps/glslang"/>
   <project name="platform/external/desugar" path="external/desugar"/>
   <project name="platform/external/dexmaker" path="external/dexmaker"/>
   <project name="platform/external/dlmalloc" path="external/dlmalloc"/>
@@ -175,11 +181,9 @@
   <project name="platform/external/flatbuffers" path="external/flatbuffers"/>
   <project name="platform/external/fmtlib" path="external/fmtlib"/>
   <project name="platform/external/fonttools" path="external/fonttools"/>
-  <project name="platform/external/FP16" path="external/FP16"/>
   <project name="platform/external/freetype" path="external/freetype"/>
   <project name="platform/external/fsck_msdos" path="external/fsck_msdos"/>
   <project name="platform/external/fsverity-utils" path="external/fsverity-utils"/>
-  <project name="platform/external/FXdiv" path="external/FXdiv"/>
   <project name="platform/external/gemmlowp" path="external/gemmlowp"/>
   <project name="platform/external/geojson-jackson" path="external/geojson-jackson"/>
   <project name="platform/external/geonames" path="external/geonames"/>
@@ -223,7 +227,6 @@
   <project name="platform/external/icu" path="external/icu" clone-depth="1"/>
   <project name="platform/external/igt-gpu-tools" path="external/igt-gpu-tools"/>
   <project name="platform/external/image_io" path="external/image_io"/>
-  <project name="platform/external/ImageMagick" path="external/ImageMagick"/>
   <project name="platform/external/ims" path="external/ims"/>
   <project name="platform/external/iperf3" path="external/iperf3"/>
   <project name="platform/external/iproute2" path="external/iproute2"/>
@@ -367,7 +370,6 @@
   <project name="platform/external/one-true-awk" path="external/one-true-awk"/>
   <project name="platform/external/open-dice" path="external/open-dice"/>
   <project name="platform/external/opencensus-java" path="external/opencensus-java"/>
-  <project name="platform/external/OpenCSD" path="external/OpenCSD"/>
   <project name="platform/external/openscreen" path="external/openscreen"/>
   <project name="platform/external/openthread" path="external/openthread"/>
   <project name="platform/external/openwrt-prebuilts" path="external/openwrt-prebuilts"/>
@@ -430,7 +432,6 @@
   <project name="platform/external/python/typing" path="external/python/typing"/>
   <project name="platform/external/python/uritemplates" path="external/python/uritemplates"/>
   <project name="platform/external/rappor" path="external/rappor"/>
-  <project name="platform/external/Reactive-Extensions/RxCpp" path="external/Reactive-Extensions/RxCpp"/>
   <project name="platform/external/renderscript-intrinsics-replacement-toolkit" path="external/renderscript-intrinsics-replacement-toolkit"/>
   <project name="platform/external/replicaisland" path="external/replicaisland"/>
   <project name="platform/external/rmi4utils" path="external/rmi4utils"/>
@@ -685,9 +686,8 @@
   <project name="platform/external/tcpdump" path="external/tcpdump"/>
   <project name="platform/external/tensorflow" path="external/tensorflow" clone-depth="1"/>
   <project name="platform/external/testng" path="external/testng"/>
-  <project name="platform/external/TestParameterInjector" path="external/TestParameterInjector"/>
   <project name="platform/external/tflite-support" path="external/tflite-support"/>
-  <project name="platform/external/timezone-boundary-builder" path="external/timezone-boundary-builder" clone-depth="1"/>
+  <project name="platform/external/timezone-boundary-builder" path="external/timezone-boundary-builder" clone-depth="2"/>
   <project name="platform/external/tinyalsa" path="external/tinyalsa"/>
   <project name="platform/external/tinyalsa_new" path="external/tinyalsa_new"/>
   <project name="platform/external/tinycompress" path="external/tinycompress"/>
@@ -719,7 +719,6 @@
   <project name="platform/external/wuffs-mirror-release-c" path="external/wuffs-mirror-release-c"/>
   <project name="platform/external/wycheproof" path="external/wycheproof"/>
   <project name="platform/external/xmp_toolkit" path="external/xmp_toolkit"/>
-  <project name="platform/external/XNNPACK" path="external/XNNPACK"/>
   <project name="platform/external/xz-embedded" path="external/xz-embedded"/>
   <project name="platform/external/xz-java" path="external/xz-java"/>
   <project name="platform/external/yapf" path="external/yapf"/>
@@ -804,11 +803,11 @@
   <project name="platform/packages/apps/Car/RotaryController" path="packages/apps/Car/RotaryController"/>
   <project name="platform/packages/apps/Car/Settings" path="packages/apps/Car/Settings"/>
   <project name="platform/packages/apps/Car/SettingsIntelligence" path="packages/apps/Car/SettingsIntelligence"/>
-  <project name="platform/packages/apps/Car/systemlibs" path="packages/apps/Car/systemlibs"/>
   <project name="platform/packages/apps/Car/SystemUI" path="packages/apps/Car/SystemUI"/>
   <project name="platform/packages/apps/Car/SystemUpdater" path="packages/apps/Car/SystemUpdater"/>
   <project name="platform/packages/apps/Car/Templates" path="packages/apps/Car/Templates"/>
   <project name="platform/packages/apps/Car/VoiceControl" path="packages/apps/Car/VoiceControl"/>
+  <project name="platform/packages/apps/Car/systemlibs" path="packages/apps/Car/systemlibs"/>
   <project name="platform/packages/apps/CarrierConfig" path="packages/apps/CarrierConfig"/>
   <project name="platform/packages/apps/CellBroadcastReceiver" path="packages/apps/CellBroadcastReceiver"/>
   <project name="platform/packages/apps/CertInstaller" path="packages/apps/CertInstaller"/>
@@ -828,7 +827,7 @@
   <project name="platform/packages/apps/ManagedProvisioning" path="packages/apps/ManagedProvisioning"/>
   <project name="platform/packages/apps/Messaging" path="packages/apps/Messaging"/>
   <project name="platform/packages/apps/Mms" path="vendor/codeaurora/commonsys/packages/apps/Mms">
-    <linkfile dest="vendor/qcom/defs/product-defs/system/app_mms_product.mk" src="app_mms_system_product.mk"/>
+    <linkfile src="app_mms_system_product.mk" dest="vendor/qcom/defs/product-defs/system/app_mms_product.mk"/>
   </project>
   <project name="platform/packages/apps/Music" path="packages/apps/Music"/>
   <project name="platform/packages/apps/MusicFX" path="packages/apps/MusicFX"/>
@@ -847,25 +846,24 @@
   <project name="platform/packages/apps/Settings" path="packages/apps/Settings"/>
   <project name="platform/packages/apps/SettingsIntelligence" path="packages/apps/SettingsIntelligence"/>
   <project name="platform/packages/apps/SnapdragonMusic" path="vendor/codeaurora/commonsys/packages/apps/SnapdragonMusic">
-    <linkfile dest="vendor/qcom/defs/product-defs/system/app_snapMusic_product.mk" src="app_snapMusic_system_product.mk"/>
+    <linkfile src="app_snapMusic_system_product.mk" dest="vendor/qcom/defs/product-defs/system/app_snapMusic_product.mk"/>
   </project>
   <project name="platform/packages/apps/SpareParts" path="packages/apps/SpareParts"/>
   <project name="platform/packages/apps/Stk" path="packages/apps/Stk"/>
   <project name="platform/packages/apps/StorageManager" path="packages/apps/StorageManager"/>
   <project name="platform/packages/apps/SystemUIGo" path="packages/apps/SystemUIGo"/>
+  <project name="platform/packages/apps/TV" path="packages/apps/TV"/>
   <project name="platform/packages/apps/Tag" path="packages/apps/Tag"/>
   <project name="platform/packages/apps/Test/connectivity" path="packages/apps/Test/connectivity"/>
   <project name="platform/packages/apps/ThemePicker" path="packages/apps/ThemePicker"/>
   <project name="platform/packages/apps/TimeZoneData" path="packages/apps/TimeZoneData"/>
   <project name="platform/packages/apps/TimeZoneUpdater" path="packages/apps/TimeZoneUpdater"/>
   <project name="platform/packages/apps/Traceur" path="packages/apps/Traceur"/>
-  <project name="platform/packages/apps/TV" path="packages/apps/TV"/>
   <project name="platform/packages/apps/TvSettings" path="packages/apps/TvSettings"/>
   <project name="platform/packages/apps/WallpaperPicker" path="packages/apps/WallpaperPicker"/>
   <project name="platform/packages/apps/WallpaperPicker2" path="packages/apps/WallpaperPicker2"/>
   <project name="platform/packages/inputmethods/LatinIME" path="packages/inputmethods/LatinIME"/>
   <project name="platform/packages/inputmethods/LeanbackIME" path="packages/inputmethods/LeanbackIME"/>
-  <project name="platform/packages/modules/adb" path="packages/modules/adb"/>
   <project name="platform/packages/modules/AdServices" path="packages/modules/AdServices"/>
   <project name="platform/packages/modules/AppSearch" path="packages/modules/AppSearch"/>
   <project name="platform/packages/modules/ArtPrebuilt" path="packages/modules/ArtPrebuilt" clone-depth="1"/>
@@ -875,7 +873,6 @@
   <project name="platform/packages/modules/BootPrebuilt/5.4/arm64" path="packages/modules/BootPrebuilt/5.4/arm64" clone-depth="1"/>
   <project name="platform/packages/modules/CaptivePortalLogin" path="packages/modules/CaptivePortalLogin"/>
   <project name="platform/packages/modules/CellBroadcastService" path="packages/modules/CellBroadcastService"/>
-  <project name="platform/packages/modules/common" path="packages/modules/common"/>
   <project name="platform/packages/modules/Connectivity" path="packages/modules/Connectivity"/>
   <project name="platform/packages/modules/DnsResolver" path="packages/modules/DnsResolver"/>
   <project name="platform/packages/modules/ExtServices" path="packages/modules/ExtServices"/>
@@ -892,14 +889,16 @@
   <project name="platform/packages/modules/OnDevicePersonalization" path="packages/modules/OnDevicePersonalization"/>
   <project name="platform/packages/modules/Permission" path="packages/modules/Permission"/>
   <project name="platform/packages/modules/RuntimeI18n" path="packages/modules/RuntimeI18n"/>
+  <project name="platform/packages/modules/SEPolicy" path="packages/modules/SEPolicy"/>
   <project name="platform/packages/modules/Scheduling" path="packages/modules/Scheduling"/>
   <project name="platform/packages/modules/SdkExtensions" path="packages/modules/SdkExtensions"/>
-  <project name="platform/packages/modules/SEPolicy" path="packages/modules/SEPolicy"/>
   <project name="platform/packages/modules/StatsD" path="packages/modules/StatsD"/>
   <project name="platform/packages/modules/Uwb" path="packages/modules/Uwb"/>
   <project name="platform/packages/modules/Virtualization" path="packages/modules/Virtualization"/>
-  <project name="platform/packages/modules/vndk" path="packages/modules/vndk"/>
   <project name="platform/packages/modules/Wifi" path="packages/modules/Wifi"/>
+  <project name="platform/packages/modules/adb" path="packages/modules/adb"/>
+  <project name="platform/packages/modules/common" path="packages/modules/common"/>
+  <project name="platform/packages/modules/vndk" path="packages/modules/vndk"/>
   <project name="platform/packages/providers/BlockedNumberProvider" path="packages/providers/BlockedNumberProvider"/>
   <project name="platform/packages/providers/BookmarkProvider" path="packages/providers/BookmarkProvider"/>
   <project name="platform/packages/providers/CalendarProvider" path="packages/providers/CalendarProvider"/>
@@ -955,10 +954,8 @@
   <project name="platform/prebuilts/misc" path="prebuilts/misc" clone-depth="1"/>
   <project name="platform/prebuilts/module_sdk/AdServices" path="prebuilts/module_sdk/AdServices" clone-depth="1"/>
   <project name="platform/prebuilts/module_sdk/AppSearch" path="prebuilts/module_sdk/AppSearch" clone-depth="1"/>
-  <project name="platform/prebuilts/module_sdk/art" path="prebuilts/module_sdk/art" clone-depth="1"/>
   <project name="platform/prebuilts/module_sdk/Bluetooth" path="prebuilts/module_sdk/Bluetooth" clone-depth="1"/>
   <project name="platform/prebuilts/module_sdk/Connectivity" path="prebuilts/module_sdk/Connectivity" clone-depth="1"/>
-  <project name="platform/prebuilts/module_sdk/conscrypt" path="prebuilts/module_sdk/conscrypt" clone-depth="1"/>
   <project name="platform/prebuilts/module_sdk/IPsec" path="prebuilts/module_sdk/IPsec" clone-depth="1"/>
   <project name="platform/prebuilts/module_sdk/Media" path="prebuilts/module_sdk/Media" clone-depth="1"/>
   <project name="platform/prebuilts/module_sdk/MediaProvider" path="prebuilts/module_sdk/MediaProvider" clone-depth="1"/>
@@ -969,6 +966,8 @@
   <project name="platform/prebuilts/module_sdk/StatsD" path="prebuilts/module_sdk/StatsD" clone-depth="1"/>
   <project name="platform/prebuilts/module_sdk/Uwb" path="prebuilts/module_sdk/Uwb" clone-depth="1"/>
   <project name="platform/prebuilts/module_sdk/Wifi" path="prebuilts/module_sdk/Wifi" clone-depth="1"/>
+  <project name="platform/prebuilts/module_sdk/art" path="prebuilts/module_sdk/art" clone-depth="1"/>
+  <project name="platform/prebuilts/module_sdk/conscrypt" path="prebuilts/module_sdk/conscrypt" clone-depth="1"/>
   <project name="platform/prebuilts/ndk" path="prebuilts/ndk"/>
   <project name="platform/prebuilts/python/linux-x86/2.7.5" path="prebuilts/python/linux-x86/2.7.5"/>
   <project name="platform/prebuilts/qemu-kernel" path="prebuilts/qemu-kernel"/>
@@ -1071,59 +1070,59 @@
   <project name="platform/tools/trebuchet" path="tools/trebuchet"/>
   <project name="platform/vendor/codeaurora/packages/apps/Dialer" path="vendor/codeaurora/commonsys/packages/apps/Dialer"/>
   <project name="platform/vendor/codeaurora/packages/apps/SoundRecorder" path="vendor/codeaurora/commonsys/packages/apps/SoundRecorder">
-    <linkfile dest="vendor/qcom/defs/product-defs/system/app_qtiSoundRecorder_product.mk" src="app_qtiSoundRecorder_system_product.mk"/>
+    <linkfile src="app_qtiSoundRecorder_system_product.mk" dest="vendor/qcom/defs/product-defs/system/app_qtiSoundRecorder_product.mk"/>
   </project>
   <project name="platform/vendor/codeaurora/telephony" path="vendor/codeaurora/commonsys/telephony"/>
   <project name="platform/vendor/nxp/interfaces/opensource/nfc" path="vendor/nxp/opensource/interfaces/nfc"/>
   <project name="platform/vendor/nxp/opensource/external/libnfc-nci" path="vendor/nxp/opensource/commonsys/external/libnfc-nci"/>
   <project name="platform/vendor/nxp/opensource/frameworks" path="vendor/nxp/opensource/commonsys/frameworks"/>
   <project name="platform/vendor/nxp/opensource/packages/apps/Nfc" path="vendor/nxp/opensource/commonsys/packages/apps/Nfc">
-    <linkfile dest="vendor/qcom/defs/product-defs/system/nfc-system-product.mk" src="nfc_system_product.mk"/>
+    <linkfile src="nfc_system_product.mk" dest="vendor/qcom/defs/product-defs/system/nfc-system-product.mk"/>
   </project>
   <project name="platform/vendor/qcom-opensource/audio" path="vendor/qcom/opensource/commonsys/audio">
-    <linkfile dest="vendor/qcom/defs/product-defs/system/audio_system_product.mk" src="configs/qssi/audio_system_product.mk"/>
+    <linkfile src="configs/qssi/audio_system_product.mk" dest="vendor/qcom/defs/product-defs/system/audio_system_product.mk"/>
   </project>
   <project name="platform/vendor/qcom-opensource/bluetooth" path="vendor/qcom/opensource/commonsys/bluetooth"/>
   <project name="platform/vendor/qcom-opensource/bluetooth-commonsys-intf" path="vendor/qcom/opensource/commonsys-intf/bluetooth">
-    <linkfile dest="vendor/qcom/defs/board-defs/system/bt-system-qssi-board.mk" src="bt-system-qssi-board.mk"/>
-    <linkfile dest="vendor/qcom/defs/product-defs/system/bt-system-opensource-product.mk" src="bt-system-opensource-product.mk"/>
+    <linkfile src="bt-system-qssi-board.mk" dest="vendor/qcom/defs/board-defs/system/bt-system-qssi-board.mk"/>
+    <linkfile src="bt-system-opensource-product.mk" dest="vendor/qcom/defs/product-defs/system/bt-system-opensource-product.mk"/>
   </project>
   <project name="platform/vendor/qcom-opensource/bluetooth_ext" path="vendor/qcom/opensource/commonsys/bluetooth_ext"/>
   <project name="platform/vendor/qcom-opensource/core-utils" path="vendor/qcom/opensource/core-utils">
-    <linkfile dest="vendor/qcom/build/tasks/QSSI_violators.mk" src="build/QSSI_violators.mk"/>
-    <linkfile dest="vendor/qcom/build/tasks/QMAA_enforcement.mk" src="build/QMAA_enforcement.mk"/>
-    <linkfile dest="vendor/qcom/build/tasks/vendor_prop_context_restriction.mk" src="build/vendor_prop_context_restriction.mk"/>
-    <linkfile dest="vendor/qcom/build/tasks/generate_vendor_bundle.mk" src="image_generation_tool/generate_vendor_bundle.mk"/>
-    <linkfile dest="vendor/qcom/defs/product-defs/vendor/image_generation_tool_product.mk" src="image_generation_tool/config/image_generation_tool_product.mk"/>
-    <linkfile dest="build.sh" src="build/build.sh"/>
-    <linkfile dest="kernel/Android.mk" src="build/stop_scan.mk"/>
-    <linkfile dest="disregard/Android.mk" src="build/stop_scan.mk"/>
+    <linkfile src="build/QSSI_violators.mk" dest="vendor/qcom/build/tasks/QSSI_violators.mk"/>
+    <linkfile src="build/QMAA_enforcement.mk" dest="vendor/qcom/build/tasks/QMAA_enforcement.mk"/>
+    <linkfile src="build/vendor_prop_context_restriction.mk" dest="vendor/qcom/build/tasks/vendor_prop_context_restriction.mk"/>
+    <linkfile src="image_generation_tool/generate_vendor_bundle.mk" dest="vendor/qcom/build/tasks/generate_vendor_bundle.mk"/>
+    <linkfile src="image_generation_tool/config/image_generation_tool_product.mk" dest="vendor/qcom/defs/product-defs/vendor/image_generation_tool_product.mk"/>
+    <linkfile src="build/build.sh" dest="build.sh"/>
+    <linkfile src="build/stop_scan.mk" dest="kernel/Android.mk"/>
+    <linkfile src="build/stop_scan.mk" dest="disregard/Android.mk"/>
   </project>
   <project name="platform/vendor/qcom-opensource/core-utils-sys" path="vendor/qcom/opensource/core-utils-sys"/>
   <project name="platform/vendor/qcom-opensource/cryptfs_hw" path="vendor/qcom/opensource/commonsys/cryptfs_hw"/>
   <project name="platform/vendor/qcom-opensource/dataservices-commonsys" path="vendor/qcom/opensource/commonsys/dataservices"/>
   <project name="platform/vendor/qcom-opensource/display-commonsys" path="vendor/qcom/opensource/commonsys/display">
-    <linkfile dest="vendor/qcom/defs/product-defs/system/display-product-commonsys.mk" src="config/display-product-commonsys.mk"/>
+    <linkfile src="config/display-product-commonsys.mk" dest="vendor/qcom/defs/product-defs/system/display-product-commonsys.mk"/>
   </project>
   <project name="platform/vendor/qcom-opensource/display-commonsys-intf" path="vendor/qcom/opensource/commonsys-intf/display">
-    <linkfile dest="vendor/qcom/defs/product-defs/system/display-product-system.mk" src="config/display-product-system.mk"/>
-    <linkfile dest="vendor/qcom/defs/product-defs/vendor/display-interfaces-product.mk" src="config/display-interfaces-product.mk"/>
+    <linkfile src="config/display-product-system.mk" dest="vendor/qcom/defs/product-defs/system/display-product-system.mk"/>
+    <linkfile src="config/display-interfaces-product.mk" dest="vendor/qcom/defs/product-defs/vendor/display-interfaces-product.mk"/>
   </project>
   <project name="platform/vendor/qcom-opensource/dpm-commonsys" path="vendor/qcom/opensource/commonsys/dpm"/>
   <project name="platform/vendor/qcom-opensource/fm-commonsys" path="vendor/qcom/opensource/commonsys/fm"/>
   <project name="platform/vendor/qcom-opensource/interfaces" path="vendor/qcom/opensource/interfaces"/>
   <project name="platform/vendor/qcom-opensource/iot-media-app-commonsys" path="vendor/qcom/opensource/commonsys/iot-media-app-commonsys">
-    <linkfile dest="vendor/qcom/defs/product-defs/system/iot-media-app-commonsys-system.mk" src="iot-media-app-commonsys-system.mk" />
+    <linkfile src="iot-media-app-commonsys-system.mk" dest="vendor/qcom/defs/product-defs/system/iot-media-app-commonsys-system.mk"/>
   </project>
   <project name="platform/vendor/qcom-opensource/packages/apps/Bluetooth" path="vendor/qcom/opensource/commonsys/packages/apps/Bluetooth"/>
   <project name="platform/vendor/qcom-opensource/system/bt" path="vendor/qcom/opensource/commonsys/system/bt"/>
   <project name="platform/vendor/qcom/opensource/commonsys-intf/audio" path="vendor/qcom/opensource/commonsys-intf/audio"/>
   <project name="platform/vendor/qcom/opensource/commonsys/wifi" path="vendor/qcom/opensource/commonsys/wifi">
-    <linkfile dest="vendor/qcom/defs/product-defs/system/qtiwifi-ship-product-defs-system.mk" src="configs/qtiwifi-ship-product-defs-system.mk"/>
+    <linkfile src="configs/qtiwifi-ship-product-defs-system.mk" dest="vendor/qcom/defs/product-defs/system/qtiwifi-ship-product-defs-system.mk"/>
   </project>
   <project name="platform/vendor/st/opensource/frameworks/st21nfc" path="vendor/st/opensource/commonsys/frameworks/st21nfc"/>
   <project name="platform/vendor/st/opensource/packages/apps/Nfc" path="vendor/st/opensource/commonsys/packages/apps/Nfc">
-    <linkfile dest="vendor/qcom/defs/product-defs/system/nfc-system-product-stm.mk" src="nfc_system_product.mk"/>
+    <linkfile src="nfc_system_product.mk" dest="vendor/qcom/defs/product-defs/system/nfc-system-product-stm.mk"/>
   </project>
   <project name="platform/vendor/st/opensource/system/nfc" path="vendor/st/opensource/commonsys/system/nfc"/>
   <project name="toolchain/pgo-profiles" path="toolchain/pgo-profiles"/>
