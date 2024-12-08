@@ -26,13 +26,13 @@ Error 404: Bugs not found!
  2. Run the following commands to sync Project-404 source
 
  	```bash
-         mkdir p-404 && cd p-404
+    mkdir p-404 && cd p-404
  	```
  	```bash
-         repo init -u https://github.com/P-404rk/android_manifest -b rippa
+    repo init -u https://github.com/P-404rk/android_manifest -b rippa
  	```
  	```bash
-         repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+    repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
  	```
 
  3. Once the source is downloaded prepare your trees and build.
