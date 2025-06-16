@@ -32,7 +32,7 @@ mkdir p-404 && cd p-404
 repo init -u https://github.com/P-404rk/android_manifest.git -b rippa
 ```
 ```bash
-repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune
 ```
 
  3. Once the source is downloaded prepare your trees and build.
