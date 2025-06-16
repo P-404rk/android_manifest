@@ -29,7 +29,7 @@ Error 404: Bugs not found!
 mkdir p-404 && cd p-404
 ```
 ```bash
-repo init -u https://github.com/P-404/platform_manifest -b rippa
+repo init -u https://github.com/P-404rk/android_manifest.git -b rippa
 ```
 ```bash
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
