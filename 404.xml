@@ -9,6 +9,10 @@
           fetch="https://github.com/P-404/"
           revision="rippa" />
 
+  <remote name="404rk"
+          fetch="https://github.com/P-404rk/"
+          revision="rippa" />
+
   <remote name="404-gitlab"
           fetch="https://gitlab.com/project-404"
           revision="rippa" />
@@ -107,7 +111,7 @@
   <project path="hardware/qcom/wlan" name="android_hardware_qcom_wlan" remote="404" />
 
   <!-- Manifest -->
-  <project path="manifest" name="android_manifest" remote="404" />
+  <project path="manifest" name="android_manifest" remote="404rk" />
 
   <!-- Packages -->
   <remove-project name="platform/packages/apps/Launcher3" />
