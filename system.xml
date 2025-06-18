@@ -713,9 +713,9 @@
   <project name="platform/tools/tradefederation/contrib" path="tools/tradefederation/contrib"/>
   <project name="platform/tools/trebuchet" path="tools/trebuchet"/>
   <project name="platform/vendor/codeaurora/packages/apps/Dialer" path="vendor/codeaurora/commonsys/packages/apps/Dialer"/>
-  <project name="platform/vendor/codeaurora/packages/apps/SoundRecorder" path="vendor/codeaurora/commonsys/packages/apps/SoundRecorder">
+  <!-- <project name="platform/vendor/codeaurora/packages/apps/SoundRecorder" path="vendor/codeaurora/commonsys/packages/apps/SoundRecorder">
     <linkfile src="app_qtiSoundRecorder_system_product.mk" dest="vendor/qcom/defs/product-defs/system/app_qtiSoundRecorder_product.mk"/>
-  </project>
+  </project> -->
   <project name="platform/vendor/codeaurora/telephony" path="vendor/codeaurora/commonsys/telephony"/>
   <project name="platform/vendor/nxp/interfaces/opensource/nfc" path="vendor/nxp/opensource/interfaces/nfc"/>
   <project name="platform/vendor/nxp/opensource/external/libnfc-nci" path="vendor/nxp/opensource/commonsys/external/libnfc-nci"/>
